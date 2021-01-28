@@ -1,14 +1,68 @@
 <!DOCTYPE html>
+
 <!--
 	Name: Jonathan Winter
 	Date Created: 12/21/20
-	Most Recent Revision: 12/21/20
+	Most Recent Revision: 1/27/21
 -->
 
 <html lang="en">
-	
 	<head>
+		<meta charset="utf-8">
+		
 		<title>Menu Page</title>
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+			integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+			crossorigin="anonymous">
+		<link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
+		
+		<style>
+		
+			<!-- tr:nth-child(2n+2) { -->
+				<!-- background-color: #8AA29E; -->
+			<!-- } -->
+			
+			.table-one {
+				text-align:center;
+				width:90%;
+				max-width:90%;
+				margin: 0 auto;
+				margin-bottom:40px;
+			}	
+			
+			.table-two {
+				text-align:left;
+				line-height: 1.5;
+				width:90%;
+				max-width:90%;
+				margin: 0 auto;
+			}
+			
+			th {
+				font-size: 1.2em;
+				padding-top: 25px;
+			}
+			
+			.table-top {
+				font-weight:bold;
+				width:100%;
+				border: thin solid #FFFFFF;
+			}
+			
+			.wide-cell {
+				width:70%;
+				border: thin solid #FFFFFF;
+				border-collapse:collapse;
+			}
+			
+			.narrow-cell {
+				width:30%;
+				border: thin solid #FFFFFF;
+				border-collapse:collapse;
+			}
+
+		</style>
 	</head>
 	
 	<body>
@@ -17,21 +71,24 @@
 		</header>
 		
 		<nav> 
-		<hr/>
-			<p>
-				<a href="home.html">Home</a>
-				<a href="menu.html">Menu</a>
-				<a href="contact.html">Contact Us</a>
-			</p>
-		<hr/>
+			<a class="btn badge-pill" href="home.html">Home</a>
+			<a class="btn badge-pill" href="menu.html">Menu</a>
+			<a class="btn badge-pill" href="contact.html">Contact Us</a>
 		</nav>
 		
 		</br>
-		<table>
+		
+		<table class="table-one">
 			<tr>
 				<th>Glowberry Macaron x3</th>
 				<th>Sylberry Snowcake</th>	
 				<th>Honeyplum Pie</th>
+			</tr>
+			
+			<tr>
+				<td>Incandescent treats!</td>
+				<td>A crowd favorite!</td>	
+				<td>Super tart & sweet!</td>
 			</tr>
 			
 			<tr>
@@ -45,17 +102,23 @@
 				<td>$7.95</td>
 				<td>$5.95</td>
 			</tr>
-		
-		</br>
-		
+			
+			<!-- Needs to be a space here to help separate top and bottom row -->
+			
 			<tr>
-				<th>Coffee</th>
+				<th>Ardendew Kombucha</th>
 				<th>Mulled Cider</th>	
 				<th>Wintermelon Sparkling Water</th>
 			</tr>
 			
 			<tr>
-				<td>Freshly ground and brewed every day</td>
+				<td>Very pungent!</td>
+				<td>Sweet and spicy!</td>	
+				<td>Bubbly and crisp!</td>
+			</tr>
+			
+			<tr>
+				<td>Water from an anima-rich stream and fermented for peak flavor</td>
 				<td>Spiced with cinnamon, allspice berries, cloves, and orange zest</td>	
 				<td>Infused with ripe wintermelon and bottled at our naturally bubbly spring</td>
 			</tr>
@@ -66,12 +129,46 @@
 				<td>$3.95</td>
 			</tr>
 		</table>
-		</br>
 		
-		<footer>
-		<hr/>
-		<p>902 Forest Grove Run, Ardenweald, Azeroth 61475</p>
-		<p>651-555-6993</p>
+		<!-- I thought I could maybe sneak this in after the first table,  -->
+		<!-- but I think I need to combine the tables and then use colspan to make the second one work. -->
+		
+		<!-- <style> -->
+		<!-- tr:nth-child(even) { -->
+			<!-- background-color: #8AA29E; -->
+		<!-- } -->
+		<!-- </style>	 -->
+			
+		<table class="table-two">
+			<tr>
+				<td colspan="2"; class="table-top">Regular Beverages</td>
+			</tr>
+
+			<tr>
+				<td class="wide-cell">Bottled Water</td>
+				<td class="narrow-cell">$1.25<td>
+			</tr>
+			
+			<tr>
+				<td class="wide-cell">Coffee</td>
+				<td class="narrow-cell">$1.00<td>
+			</tr>
+			
+			<tr>
+				<td class="wide-cell">Iced Tea</td>
+				<td class="narrow-cell">$1.50<td>
+			</tr>
+			
+			<tr>
+				<td class="wide-cell">Lemonade</td>
+				<td class="narrow-cell">$2.00<td>
+			</tr>
+		</table>
+		
+		
+		<footer class="bottom">
+			<div>902 Forest Grove Run, Ardenweald, Azeroth 61475 </br>
+			651-555-6993</div>
 		</footer>
 	</body>
 </html>

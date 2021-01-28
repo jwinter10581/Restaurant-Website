@@ -1,14 +1,44 @@
 <!DOCTYPE html>
+
 <!--
 	Name: Jonathan Winter
-	Date Created: 12/28/20
-	Most Recent Revision: 12/28/20
+	Date Created: 12/21/20
+	Most Recent Revision: 1/27/21
 -->
 
 <html lang="en">
-	
 	<head>
+		<meta charset="utf-8">	
+		
 		<title>Contact Page</title>
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+			integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+			crossorigin="anonymous">
+		<link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
+		
+		<style>
+		
+		main {
+			max-width:60%;
+			text-align: right;
+			font-weight:bold;
+		}
+		
+		#name, #email, #phone, #inquiry, #info, #visit {
+			width:180px;
+		}
+		
+		#submit {
+			text-align:center;
+		}
+		
+		.center-mass {
+			text-align:center;
+		}
+		
+		</style>
+		
 	</head>
 	
 	<body>
@@ -17,67 +47,68 @@
 		</header>
 		
 		<nav> 
-		<hr/>
-			<p>
-				<a href="home.html">Home</a>
-				<a href="menu.html">Menu</a>
-				<a href="contact.html">Contact Us</a>
-			</p>
-		<hr/>
+			<a class="btn badge-pill" href="home.html">Home</a>
+			<a class="btn badge-pill" href="menu.html">Menu</a>
+			<a class="btn badge-pill" href="contact.html">Contact Us</a>
 		</nav>
 		
-		<section>
-		<form action="submit.html" method="POST"> <!--This isn't hooked up yet, will likely return to update it later-->
+		</br>
 		
-			<label for="name">Name:</label>
-			<input type="text" id="name" name="name"> <br/>
+		<main>
+			<form action="submit.html" method="POST"> <!--This isn't hooked up yet, will likely return to update it later-->
 			
-			<label for="email">Email:</label>
-			<input type="text" id="email" name="email"> <br/>
-			
-			<label for="phone">Phone:</label>
-			<input type="text" id="phone" name="phone"> <br/>
+				<label for="name">Name:</label>
+					<input type="text" id="name" name="name"> <br/>
+				
+				<label for="email">Email:</label>
+					<input type="text" id="email" name="email"> <br/>
+				
+				<label for="phone">Phone:</label>
+					<input type="text" id="phone" name="phone"> <br/>
 
-			<label for="inquiry">Reason for Inquiry:</label>
-			<select id="inquiry" name="inquiry">
-				<option value="default" selected>Catering</option>
-				<option value="private">Private Party</option>
-				<option value="feedback">Feeback</option>
-				<option value="other">Other</option>
-			</select> 
-			<br/>
-			
-			<label for="info">Additional Information:</label>
-			<textarea id="info" name="info"></textarea></br>
-			
-			<label for="visit">Have you been to the restaurant?</label>
-			<input type="radio" id="choice1" name="visit" value="no">
-			<label for="choice1">No</label>
-			<input type="radio" id="choice2" name="visit" value="yes">
-			<label for="choice2">Yes</label>
-			<br/>
-			
-			<label for="contact">Best days to contact you:</label>
-			<input type="checkbox" id="mon" name="day" value="mon">
-			<label for="mon">M</label>
-			<input type="checkbox" id="tue" name="day" value="tue">
-			<label for="tue">T</label>
-			<input type="checkbox" id="wed" name="day" value="wed">
-			<label for="wed">W</label>
-			<input type="checkbox" id="thu" name="day" value="thu">
-			<label for="thu">Th</label>
-			<input type="checkbox" id="fri" name="day" value="fri">
-			<label for="fri">F</label>
-			<br/>
-			
-			<input type="submit" name="submit" value="Send Request">
-			
-		</section>
+				<label for="inquiry">Reason for Inquiry:</label>
+					<select id="inquiry" name="inquiry">
+						<option value="default" selected>Catering</option>
+						<option value="private">Private Party</option>
+						<option value="feedback">Feeback</option>
+						<option value="other">Other</option>
+					</select> 
+					
+				<br/>
+				
+				<label for="info">Additional Information:</label>
+					<textarea id="info" name="info" ></textarea></br>
+				
+				<label for="visit">Have you been to the restaurant?</label>
+					<input type="radio" id="choice1" name="visit" value="no" checked>
+				<label for="choice1">No</label>
+					<input type="radio" id="choice2" name="visit" value="yes">
+				<label for="choice2">Yes</label>
+				
+				<br/>
+				
+				<label for="contact">Best days to contact you:</label>
+					<input type="checkbox" id="mon" name="day" value="mon">
+				<label for="mon">M</label>
+					<input type="checkbox" id="tue" name="day" value="tue">
+				<label for="tue">T</label>
+					<input type="checkbox" id="wed" name="day" value="wed">
+				<label for="wed">W</label>
+					<input type="checkbox" id="thu" name="day" value="thu">
+				<label for="thu">Th</label>
+					<input type="checkbox" id="fri" name="day" value="fri">
+				<label for="fri">F</label>
+				
+			</form>
+		</main>
 		
-		<footer>
-			<hr/>
-			<p>902 Forest Grove Run, Ardenweald, Azeroth 61475</p>
-			<p>651-555-6993</p>
+		<div class="center-mass">
+			<input type="submit" name="submit" value="Send Request">
+		</div>
+		
+		<footer class="bottom">
+			<div>902 Forest Grove Run, Ardenweald, Azeroth 61475 </br>
+			651-555-6993</div>
 		</footer>
 	</body>
 </html>
